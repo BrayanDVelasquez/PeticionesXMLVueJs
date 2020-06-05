@@ -1,0 +1,84 @@
+@import '_spinner';
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.img {
+    @extend %flex-center;
+    width: 250px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    flex-direction: column;
+    margin: 20px;
+
+    .img-content {
+        margin-top: 7px;
+        width: 100%; 
+        height: 200px;
+        @extend %flex-center;
+
+        div{
+            
+            img {
+                width: 100%;
+                height: 170px; 
+                border-radius: 10px;
+                clip-path: ellipse(square);
+            }
+
+            .img-error {
+                width: 100px;
+                height: 100px;
+            }
+
+            .img-default {
+                width: 250px;
+                height: 200px;
+            }
+        }
+        
+    }
+
+    .img-divider {
+        width: 100%;
+
+        div{
+            padding: 20px 0;
+
+            hr {
+                width: 100%;
+                border: 1px solid #ccc;
+                padding: 0;
+                margin: 3px;
+            }
+        }
+         
+    }
+   
+    .img-footer {
+        width: 100%;
+        @extend %flex-center;
+
+        padding-bottom: 20px;
+
+        div {
+            width: 100%;
+        }
+    }
+}
+
+.is-padding-8 {
+    padding: 8px;
+}
+
+.is-padding-30 {
+    padding: 30px;
+}
+
+.is-center {
+    @extend %flex-center;
+}
